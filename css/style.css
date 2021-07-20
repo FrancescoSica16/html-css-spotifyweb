@@ -1,0 +1,42 @@
+/* font-family: 'Signika', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 6vh;
+    background-color: rgb(16, 16, 17);
+    z-index: 1;
+}
+
+main{
+    height: 87vh;
+    background-color: rgb(65, 65, 85);
+}
+
+footer{
+  
+    min-height: 100px;
+    background-color: rgb(52, 52, 56);
+    z-index: 3;
+    font-size: large;
+}
+
+/* classi tools */
+
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left,
+.right{
+    float: left;
+}
+
+/* fine tools */
+
