@@ -22,12 +22,19 @@ main{
     height: calc(100vh - 50px) ; */
     background-color: rgb(65, 65, 85);
     /* flex-direction: column; */
+    color:rgb(179, 182, 182)
 }
 
 footer{
     height: 50px;
     background-color: rgb(52, 52, 56);
     font-size: large;
+}
+
+h1{
+    color: whitesmoke;
+    margin: 10px 0px ;
+
 }
 .container{
     height: calc(100vh - 50px);
@@ -165,7 +172,37 @@ main>nav>ul>li{
     padding: 10px;
 }
 
+.container-content{
+    margin: 0 20px;
+}
 
+.recently-played{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item img{
+    width: 150px;
+    height: 150px;
+
+}
+
+.description{
+    text-align: center;
+}
+
+.album-playlist-name{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.artist-name{
+    font-size: 14px;
+    padding-top: 5px;
+
+}
 
 /* classi tools */
 
