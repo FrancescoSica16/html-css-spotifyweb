@@ -1,4 +1,3 @@
 {
-    "diffEditor.wordWrap": "on",
-    "editor.wordWrap": "on"
+    "diffEditor.wordWrap": "on"
 }
