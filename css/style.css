@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    height: ;
+    /* height: ; */
     flex-basis: 200px;
     background-color: rgb(16, 16, 17);
 }
@@ -37,6 +37,9 @@ footer{
 /* aside block */
 .aside{
     padding: 15px 0px 10px 15px;
+    color: rgb(179, 182, 182);
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-container{
@@ -44,9 +47,6 @@ footer{
     padding: 0px 0px 10px 0px;
 }
 
-.aside{
-    color: rgb(179, 182, 182);
-}
 
 /* menu block */
 .menu{
@@ -71,12 +71,15 @@ footer{
 /* playlist block */
 .playlist h2{
     color: whitesmoke;
+    font-size: revert;
+    margin-bottom: 15px;
 }
 
 .add-playlist{
     border: none;
     background-color: rgba(11, 1, 1, 0);
-    color: rgb(179, 182, 182);;
+    color: rgb(179, 182, 182);
+    margin-bottom: 15px;
 }
 
 .add-playlist>i{
@@ -84,14 +87,44 @@ footer{
 }
 
 .add-playlist>span{
+    font-size: large;
     vertical-align: 10px;
-    font-family: 'Signika', sans-serif;
-    
+    font-family: 'Signika', sans-serif;    
 }
 
+.playlist-panel>div{
+    padding: 0px 0 15px 0;
+}
+
+.break-line{
+    height: 1px;
+    width: 90%;
+    margin: 10px 0px 10px 0px; 
+    background-color:rgb(179, 182, 182) ;
+}
+
+.aside-footer{
+    align-items: flex-end;
+}
+
+.account-logo img{
+    background-color:rgb(179, 182, 182);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+
+.account-name{
+    padding-left: 8px;
+    width: 60%;
+    vertical-align: baseline;
+    height: 30px;
+    line-height: 30px;
+}
 /* classi tools */
 
-.clearfix{
+.clearfix::after{
     content: "";
     display: table;
     clear: both;
