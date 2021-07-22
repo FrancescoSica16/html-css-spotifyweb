@@ -32,6 +32,7 @@ footer{
     background-color: rgb(52, 52, 56);
     font-size: large;
     display: flex;
+    justify-content: space-between;
 }
 
 .gallery-titol{
@@ -54,10 +55,13 @@ footer{
 }
 
 .logo-container{
-    background-image: url(../img/logo.svg);
     width: 70%;
     padding: 0px 0px 10px 0px;
     flex-grow: 0;
+}
+
+.logo-container .small{
+    display: none;
 }
 
 
@@ -106,7 +110,7 @@ footer{
 .add-playlist>span{
     font-size: large;
     vertical-align: 10px;
-    font-family: 'Signika', sans-serif;    
+    font-family: 'Signika', sans-serif;
 }
 
 .playlist-panel>div{
@@ -116,7 +120,7 @@ footer{
 .break-line{
     height: 1px;
     width: 90%;
-    margin: 10px 0px 10px 0px; 
+    margin: 10px 0px 10px 0px;
     background-color:rgb(179, 182, 182) ;
 }
 
@@ -125,7 +129,7 @@ footer{
 }
 
 .account-logo img{
-    background-color:rgb(179, 182, 182);   
+    background-color:rgb(179, 182, 182);
     width: 30px;
     height: 30px;
 }
@@ -147,10 +151,10 @@ footer{
     line-height: 60px;
     background-color:rgba(16, 16, 17, 0.3);
     position: fixed;
-    z-index: 10;    
+    z-index: 10;
     top: 0;
     right: 0;
-} 
+}
 
 #upgrade-banner button{
     background-color:transparent;
@@ -159,18 +163,19 @@ footer{
 	display:inline-block;
 	cursor:pointer;
 	color: whitesmoke;
-	font-family: 'Signika', sans-serif; 
+	font-family: 'Signika', sans-serif;
 	font-size:15px;
 	font-weight: 500;
 	padding:8px 36px;
 	text-decoration:none;
 }
+
 nav{
     padding-top: 60px;
 }
 
 main>nav>ul{
-    list-style-type:none;  
+    list-style-type:none;
     text-align: center;
     color:rgb(179, 182, 182);
     font-size: 0.8em;
@@ -188,7 +193,7 @@ main>nav>ul>li{
 .recently-played{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;  
+    justify-content: flex-start;
 }
 
 .item{
@@ -228,7 +233,9 @@ main>nav>ul>li{
 /* player-bar */
 .played-song{
     height: 100%;
-    min-width: 150px;
+    flex-grow: 1;
+    flex-basis: 100px;
+    min-width: 120px;
     margin: 10px 0 0 10px;
 }
 .played-song img{
@@ -255,6 +262,13 @@ main>nav>ul>li{
     color: rgb(136, 136, 136)
 }
 
+.time-bar-song{
+    min-width: 285px;
+    flex-grow: 2;
+    justify-content: space-between;
+
+}
+
 .mediaplayer-button{
     margin-top: 5px;
     display: flex;
@@ -272,8 +286,14 @@ main>nav>ul>li{
     line-height: 24px;
 }
 
+.timeline{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 2;
+}
+
 .timeline-bar{
-    width: 500px;
+    flex-grow: 1;
     height: 3px;
     margin: 5px 20px 0 20px;
     border-radius: 40px;
@@ -281,11 +301,28 @@ main>nav>ul>li{
     background-color: rgb(117, 117, 117) ;
 }
 
+
 .time-played,
 .time-song{
     display: inline;
     color: rgb(214, 218, 218) ;
     font-size: 0.6em;
+}
+
+.volume{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+}
+
+.volume-bar{
+    height: 3px;
+    margin: 0px 5px 0 5px;
+    border-radius: 40px;
+    min-width: 80px;
+    background-color: rgb(117, 117, 117) ;
 }
 /* classi tools */
 
@@ -314,10 +351,12 @@ border-radius: 50%;
         display: none;
     }
 
-    .logo-container{
-       background-image: url(../img/logo-small.svg);
-       background-repeat: no-repeat;
-       background-size: contain;
+    .logo-container .large{
+        display: none;
+    }
+
+    .logo-container .small{
+        display: block;
     }
 
     .playlist,
@@ -327,12 +366,47 @@ border-radius: 50%;
         display: none;
     }
 
-    .account-logo img{  
+    .account-logo img{
         width: 16px;
         height: 16px;
         margin-top: 10px;
-        
+
     }
-    
+
+    .menu{
+        flex-grow: 6;
+    }
+
+    .aside{
+        padding: 10px 0px;
+        align-items: center;
+    }
+
+    nav{
+        font-size: 0.8em;
+    }
+
+    .item{
+        /* cosi definisco 6 in una riga */
+        flex-basis: calc((100% - 20px) / 2);
+        margin-right: 10px;
+    }
+
+    .played-song{
+        min-width: 80px;
+    }
+
+    .played-song-icon{
+        display: none;
+    }
+
+    .played-song img{
+        display: none;
+    }
+
+    .volume{
+      display: none;
+    }
+
 
 }
