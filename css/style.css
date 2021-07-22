@@ -12,14 +12,16 @@ body{
 
 header{
     /* height: ; */
-    flex-basis: 200px;
+    flex-basis: 250px;
+    min-width: 170px;
     background-color: rgb(16, 16, 17);
 }
 
 main{
+    overflow: hidden;
     flex-grow: 1;
-    /* width: calc(100vw - 400px);
-    height: calc(100vh - 50px) ; */
+    /* width: calc(100vw - 250px); */
+    /* height: calc(100vh - 60px) ; */
     background-color: rgb(65, 65, 85);
     /* flex-direction: column; */
     color:rgb(179, 182, 182)
@@ -31,10 +33,9 @@ footer{
     font-size: large;
 }
 
-h1{
+.gallery-titol{
     color: whitesmoke;
     margin: 10px 0px ;
-
 }
 .container{
     height: calc(100vh - 50px);
@@ -122,8 +123,7 @@ h1{
 }
 
 .account-logo img{
-    background-color:rgb(179, 182, 182);
-    border-radius: 50%;
+    background-color:rgb(179, 182, 182);   
     width: 30px;
     height: 30px;
 }
@@ -172,20 +172,31 @@ main>nav>ul>li{
     padding: 10px;
 }
 
+
 .container-content{
-    margin: 0 20px;
+    margin: 0 20px 40px;
+    
+
 }
 
 .recently-played{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    
+}
+
+.item{
+    flex-basis: calc((100% - 50px) / 6);
+    margin-right: 10px;
+}
+
+.item:nth-child(6n){
+    margin-right: 0;
 }
 
 .item img{
-    width: 150px;
-    height: 150px;
-
+    width: 100%;
 }
 
 .description{
@@ -195,13 +206,17 @@ main>nav>ul>li{
 .album-playlist-name{
     color: whitesmoke;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
 .artist-name{
-    font-size: 14px;
+    font-size: 0.7em;
     padding-top: 5px;
+}
 
+.container-content p{
+    font-size: 0.8em;
+    margin-bottom: 20px;
 }
 
 /* classi tools */
@@ -216,6 +231,8 @@ main>nav>ul>li{
 .right{
     float: left;
 }
-
+.circle{
+border-radius: 50%;
+}
 /* fine tools */
 
