@@ -220,7 +220,6 @@ main>nav>ul>li{
 /* player-bar */
 .played-song{
     height: 100%;
-    width: 200px;
     min-width: 150px;
     margin: 10px 0 0 10px;
 }
@@ -246,6 +245,39 @@ main>nav>ul>li{
     display: block;
     font-size: 0.9em;
     color: rgb(136, 136, 136)
+}
+
+.mediaplayer-button{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    color: rgb(214, 218, 218);
+}
+
+.mediaplayer-button i{
+    padding: 0 15px 0 15px;
+    font-size: 1.2em;
+}
+
+.mediaplayer-button .little-icon{
+    font-size: 0.7em;
+    line-height: 24px;
+}
+
+.timeline-bar{
+    width: 500px;
+    height: 3px;
+    margin: 5px 20px 0 20px;
+    border-radius: 40px;
+    min-width: 200px;
+    background-color: rgb(117, 117, 117) ;
+}
+
+.time-played,
+.time-song{
+    display: inline;
+    color: rgb(214, 218, 218) ;
+    font-size: 0.6em;
 }
 /* classi tools */
 
