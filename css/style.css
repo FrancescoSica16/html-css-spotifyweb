@@ -8,17 +8,17 @@
 
 body{
     font-family: 'Signika', sans-serif;
+    overflow: hidden;
 }
 
 header{
-    /* height: ; */
     flex-basis: 250px;
     min-width: 170px;
     background-color: rgb(16, 16, 17);
 }
 
 main{
-    overflow: hidden;
+    overflow: auto;
     flex-grow: 1;
     /* width: calc(100vw - 250px); */
     /* height: calc(100vh - 60px) ; */
@@ -54,6 +54,7 @@ footer{
 }
 
 .logo-container{
+    background-image: url(../img/logo.svg);
     width: 70%;
     padding: 0px 0px 10px 0px;
     flex-grow: 0;
@@ -140,12 +141,15 @@ footer{
 /* main section  */
 #upgrade-banner{
     height: 60px;
+    width: calc(100% - 170px);
     width: 100%;
     text-align: right;
     line-height: 60px;
     background-color:rgba(16, 16, 17, 0.3);
-    /* position: fixed; */
-    /* z-index: 10;     */
+    position: fixed;
+    z-index: 10;    
+    top: 0;
+    right: 0;
 } 
 
 #upgrade-banner button{
@@ -160,6 +164,9 @@ footer{
 	font-weight: 500;
 	padding:8px 36px;
 	text-decoration:none;
+}
+nav{
+    padding-top: 60px;
 }
 
 main>nav>ul{
@@ -185,6 +192,7 @@ main>nav>ul>li{
 }
 
 .item{
+    /* cosi definisco 6 in una riga */
     flex-basis: calc((100% - 50px) / 6);
     margin-right: 10px;
 }
@@ -296,3 +304,35 @@ border-radius: 50%;
 }
 /* fine tools */
 
+@media screen and (max-width: 420px) {
+    header{
+        /* flex-basis: 50px; */
+        min-width: 50px;
+    }
+
+    .menu>div>span{
+        display: none;
+    }
+
+    .logo-container{
+       background-image: url(../img/logo-small.svg);
+       background-repeat: no-repeat;
+       background-size: contain;
+    }
+
+    .playlist,
+    .aside-footer span,
+    .account-name,
+    .break-line{
+        display: none;
+    }
+
+    .account-logo img{  
+        width: 16px;
+        height: 16px;
+        margin-top: 10px;
+        
+    }
+    
+
+}
